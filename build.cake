@@ -24,7 +24,6 @@ var artifactsDir =  Directory("./artifacts");
 Setup(context =>
 {
     Information(Figlet(projectName));
-    
     releaseVersion = EnvironmentVariable<string>("NEW_RELEASE_VERSION", releaseVersion);
     Information("Version: {0}", releaseVersion);
 });
