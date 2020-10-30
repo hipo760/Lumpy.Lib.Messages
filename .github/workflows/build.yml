@@ -2,12 +2,12 @@
 name: Nuget package CI
 
 # Controls when the action will run. Triggers the workflow on push or pull request
-# events but only for the master branch
+# events but only for the main branch
 on:
   push:
-    branches: [ master ]
+    branches: [ main ]
   pull_request:
-    branches: [ master ]
+    branches: [ main ]
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -20,7 +20,7 @@ jobs:
         uses: cycjimmy/semantic-release-action@v2
         id: semantic_dry
         with:
-          branch: master
+          branch: main
           dry_run: true
           # You can specify specifying version range for the extra plugins if you prefer.
           extra_plugins: |
@@ -78,7 +78,7 @@ jobs:
         uses: cycjimmy/semantic-release-action@v2
         id: semantic
         with:
-          branch: master
+          branch: main
           extra_plugins: |
             @semantic-release/changelog
             @semantic-release/git

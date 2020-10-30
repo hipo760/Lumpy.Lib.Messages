@@ -18,7 +18,7 @@
   "homepage": "https://github.com/hipo760/Lumpy.Lib.Messages#readme",
   "release": {
     "branches": [
-      "master",
+      "main",
       "next"
     ],
     "plugins": [
