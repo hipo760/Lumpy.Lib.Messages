@@ -1,0 +1,6 @@
+[submodule "Lumpy.Lib.Messages/Htf.Schemas"]
+	path = Lumpy.Lib.Messages/Htf.Schemas
+	url = git@github.com:hipo760/HTF.Schemas.git
+[submodule "Lumpy.Lib.Messages/Google.Flatbuffers"]
+	path = Lumpy.Lib.Messages/Google.Flatbuffers
+	url = https://github.com/google/flatbuffers.git

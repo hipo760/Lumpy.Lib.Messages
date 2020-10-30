@@ -1,0 +1,87 @@
+# This is a basic workflow to help you get started with Actions
+name: Nuget package CI
+
+# Controls when the action will run. Triggers the workflow on push or pull request
+# events but only for the master branch
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  check_version_number:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Get semantic release version
+        uses: cycjimmy/semantic-release-action@v2
+        id: semantic_dry
+        with:
+          branch: master
+          dry_run: true
+          # You can specify specifying version range for the extra plugins if you prefer.
+          extra_plugins: |
+            @semantic-release/changelog
+            @semantic-release/git
+            @semantic-release/github
+        env:
+          GITHUB_TOKEN: ${{ secrets.GH_PAT }}
+    outputs:
+      new_release_published: ${{ steps.semantic_dry.outputs.new_release_published }}
+      new_release_version: ${{ steps.semantic_dry.outputs.new_release_version }}
+
+  build_package_push:
+    needs: check_version_number
+    if: needs.check_version_number.outputs.new_release_published == 'true'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      
+      # -uses: actions/setup-dotnet@v1
+      #   with:
+      #     dotnet-version: '3.1.x' # SDK Version to use.
+      #   env:
+      #     NUGET_AUTH_TOKEN: ${{secrets.LUMPY_NUGET_TOKEN}}
+
+      # - name: Build the project.
+      #   run: |
+      #     dotnet restore
+      #     dotnet build
+      
+      # - name: Create the package
+      #   run: dotnet pack --configuration Release --output ./artifacts
+      
+      # - name: Publish the package to Nuget
+      #   run: dotnet nuget push ./artifacts/*.nupkg
+      
+      - name: Cake action
+        uses: cake-build/cake-action@v1.2.0
+        env:
+          NUGET_AUTH_TOKEN: ${{secrets.LUMPY_NUGET_TOKEN}}
+          NEW_RELEASE_VERSION: ${{ needs.check_version_number.outputs.new_release_version }}
+        with:
+          script-path: ./build.cake
+
+  tag_version:
+    needs: build_package_push
+    #needs: check_version_number
+    if: needs.check_version_number.outputs.new_release_published == 'true'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Get semantic release version
+        uses: cycjimmy/semantic-release-action@v2
+        id: semantic
+        with:
+          branch: master
+          extra_plugins: |
+            @semantic-release/changelog
+            @semantic-release/git
+            @semantic-release/github
+        env:
+          GITHUB_TOKEN: ${{ secrets.GH_PAT }}
