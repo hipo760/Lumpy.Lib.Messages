@@ -68,8 +68,7 @@ jobs:
           script-path: ./build.cake
 
   tag_version:
-    needs: build_package_push
-    needs: check_version_number
+    needs: [build_package_push,check_version_number]
     if: needs.check_version_number.outputs.new_release_published == 'true'
     runs-on: ubuntu-latest
     steps:
