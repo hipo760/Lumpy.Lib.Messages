@@ -2,14 +2,14 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
-    <GenerateAssemblyConfigurationAttribute>false</GenerateAssemblyConfigurationAttribute>
+    <!--<GenerateAssemblyConfigurationAttribute>false</GenerateAssemblyConfigurationAttribute>
     <GenerateAssemblyDescriptionAttribute>false</GenerateAssemblyDescriptionAttribute>
     <GenerateAssemblyProductAttribute>false</GenerateAssemblyProductAttribute>
     <GenerateAssemblyTitleAttribute>false</GenerateAssemblyTitleAttribute>
     <GenerateAssemblyCompanyAttribute>false</GenerateAssemblyCompanyAttribute>
     <GenerateAssemblyFileVersionAttribute>false</GenerateAssemblyFileVersionAttribute>
     <GenerateAssemblyInformationalVersionAttribute>false</GenerateAssemblyInformationalVersionAttribute>
-    <GenerateAssemblyVersionAttribute>false</GenerateAssemblyVersionAttribute>
+    <GenerateAssemblyVersionAttribute>false</GenerateAssemblyVersionAttribute>-->
   </PropertyGroup>
 
   <ItemGroup>
@@ -27,12 +27,14 @@
     <Compile Remove="Google.Flatbuffers\lobster\**" />
     <Compile Remove="Google.Flatbuffers\lua\**" />
     <Compile Remove="Google.Flatbuffers\mjs\**" />
+    <Compile Remove="Google.Flatbuffers\net\FlatBuffers\Properties\**" />
     <Compile Remove="Google.Flatbuffers\out\**" />
     <Compile Remove="Google.Flatbuffers\php\**" />
     <Compile Remove="Google.Flatbuffers\python\**" />
     <Compile Remove="Google.Flatbuffers\reflection\**" />
     <Compile Remove="Google.Flatbuffers\rust\**" />
     <Compile Remove="Google.Flatbuffers\samples\**" />
+    <Compile Remove="Google.Flatbuffers\snap\**" />
     <Compile Remove="Google.Flatbuffers\src\**" />
     <Compile Remove="Google.Flatbuffers\swift\**" />
     <Compile Remove="Google.Flatbuffers\tests\**" />
@@ -51,12 +53,14 @@
     <EmbeddedResource Remove="Google.Flatbuffers\lobster\**" />
     <EmbeddedResource Remove="Google.Flatbuffers\lua\**" />
     <EmbeddedResource Remove="Google.Flatbuffers\mjs\**" />
+    <EmbeddedResource Remove="Google.Flatbuffers\net\FlatBuffers\Properties\**" />
     <EmbeddedResource Remove="Google.Flatbuffers\out\**" />
     <EmbeddedResource Remove="Google.Flatbuffers\php\**" />
     <EmbeddedResource Remove="Google.Flatbuffers\python\**" />
     <EmbeddedResource Remove="Google.Flatbuffers\reflection\**" />
     <EmbeddedResource Remove="Google.Flatbuffers\rust\**" />
     <EmbeddedResource Remove="Google.Flatbuffers\samples\**" />
+    <EmbeddedResource Remove="Google.Flatbuffers\snap\**" />
     <EmbeddedResource Remove="Google.Flatbuffers\src\**" />
     <EmbeddedResource Remove="Google.Flatbuffers\swift\**" />
     <EmbeddedResource Remove="Google.Flatbuffers\tests\**" />
@@ -75,16 +79,43 @@
     <None Remove="Google.Flatbuffers\lobster\**" />
     <None Remove="Google.Flatbuffers\lua\**" />
     <None Remove="Google.Flatbuffers\mjs\**" />
+    <None Remove="Google.Flatbuffers\net\FlatBuffers\Properties\**" />
     <None Remove="Google.Flatbuffers\out\**" />
     <None Remove="Google.Flatbuffers\php\**" />
     <None Remove="Google.Flatbuffers\python\**" />
     <None Remove="Google.Flatbuffers\reflection\**" />
     <None Remove="Google.Flatbuffers\rust\**" />
     <None Remove="Google.Flatbuffers\samples\**" />
+    <None Remove="Google.Flatbuffers\snap\**" />
     <None Remove="Google.Flatbuffers\src\**" />
     <None Remove="Google.Flatbuffers\swift\**" />
     <None Remove="Google.Flatbuffers\tests\**" />
     <None Remove="Google.Flatbuffers\ts\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="Google.Flatbuffers\.clang-format" />
+    <None Remove="Google.Flatbuffers\.editorconfig" />
+    <None Remove="Google.Flatbuffers\.eslintrc.js" />
+    <None Remove="Google.Flatbuffers\.git" />
+    <None Remove="Google.Flatbuffers\.gitattributes" />
+    <None Remove="Google.Flatbuffers\.gitignore" />
+    <None Remove="Google.Flatbuffers\.travis.yml" />
+    <None Remove="Google.Flatbuffers\appveyor.yml" />
+    <None Remove="Google.Flatbuffers\BUILD" />
+    <None Remove="Google.Flatbuffers\build_defs.bzl" />
+    <None Remove="Google.Flatbuffers\CMakeLists.txt" />
+    <None Remove="Google.Flatbuffers\composer.json" />
+    <None Remove="Google.Flatbuffers\conanfile.py" />
+    <None Remove="Google.Flatbuffers\CONTRIBUTING.md" />
+    <None Remove="Google.Flatbuffers\LICENSE.txt" />
+    <None Remove="Google.Flatbuffers\package.json" />
+    <None Remove="Google.Flatbuffers\pom.xml" />
+    <None Remove="Google.Flatbuffers\readme.md" />
+    <None Remove="Google.Flatbuffers\tsconfig.json" />
+    <None Remove="Google.Flatbuffers\tsconfig.mjs.json" />
+    <None Remove="Google.Flatbuffers\WORKSPACE" />
+    <None Remove="Google.Flatbuffers\yarn.lock" />
   </ItemGroup>
 
   <ItemGroup>
@@ -94,6 +125,18 @@
 
   <ItemGroup>
     <Folder Include="GenerateCode\Pbs\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EditorConfigFiles Remove="C:\dev\HappyTreeFriends\Lumpy\Lib\Lumpy.Lib.Messages\Lumpy.Lib.Messages\Google.Flatbuffers\.editorconfig" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EditorConfigFiles Remove="C:\dev\HappyTreeFriends\Lumpy\Lib\Lumpy.Lib.Messages\Lumpy.Lib.Messages\Google.Flatbuffers\.editorconfig" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EditorConfigFiles Remove="C:\dev\HappyTreeFriends\Lumpy\Lib\Lumpy.Lib.Messages\Lumpy.Lib.Messages\Google.Flatbuffers\.editorconfig" />
   </ItemGroup>
 
 </Project>
