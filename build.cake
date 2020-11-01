@@ -64,7 +64,7 @@ Task("Clean")
 
 Task("Build solution")
     .Does(() => {
-    var solutions = GetFiles("./*.sln");
+    var solutions = GetFiles("./Lumpy.Lib.Messages.sln");
     foreach(var solution in solutions)
     {
         Information("Building solution {0} v{1}", solution.GetFilenameWithoutExtension(), releaseVersion);
@@ -102,7 +102,7 @@ Task("Build solution")
 Task("Package")
     .Does(() =>
 {
-    var projects = GetFiles("./**/*.csproj");
+    var projects = GetFiles("./**/Lumpy.Lib.Messages.csproj");
     foreach(var project in projects)
     {
         var projectDirectory = project.GetDirectory().FullPath;
