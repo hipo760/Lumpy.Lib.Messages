@@ -2,10 +2,94 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
+    <GenerateAssemblyConfigurationAttribute>false</GenerateAssemblyConfigurationAttribute>
+    <GenerateAssemblyDescriptionAttribute>false</GenerateAssemblyDescriptionAttribute>
+    <GenerateAssemblyProductAttribute>false</GenerateAssemblyProductAttribute>
+    <GenerateAssemblyTitleAttribute>false</GenerateAssemblyTitleAttribute>
+    <GenerateAssemblyCompanyAttribute>false</GenerateAssemblyCompanyAttribute>
+    <GenerateAssemblyFileVersionAttribute>false</GenerateAssemblyFileVersionAttribute>
+    <GenerateAssemblyInformationalVersionAttribute>false</GenerateAssemblyInformationalVersionAttribute>
+    <GenerateAssemblyVersionAttribute>false</GenerateAssemblyVersionAttribute>
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Google.Flatbuffers\android\**" />
+    <Compile Remove="Google.Flatbuffers\bazel\**" />
+    <Compile Remove="Google.Flatbuffers\CMake\**" />
+    <Compile Remove="Google.Flatbuffers\conan\**" />
+    <Compile Remove="Google.Flatbuffers\dart\**" />
+    <Compile Remove="Google.Flatbuffers\docs\**" />
+    <Compile Remove="Google.Flatbuffers\go\**" />
+    <Compile Remove="Google.Flatbuffers\grpc\**" />
+    <Compile Remove="Google.Flatbuffers\include\**" />
+    <Compile Remove="Google.Flatbuffers\java\**" />
+    <Compile Remove="Google.Flatbuffers\js\**" />
+    <Compile Remove="Google.Flatbuffers\lobster\**" />
+    <Compile Remove="Google.Flatbuffers\lua\**" />
+    <Compile Remove="Google.Flatbuffers\mjs\**" />
+    <Compile Remove="Google.Flatbuffers\out\**" />
+    <Compile Remove="Google.Flatbuffers\php\**" />
+    <Compile Remove="Google.Flatbuffers\python\**" />
+    <Compile Remove="Google.Flatbuffers\reflection\**" />
+    <Compile Remove="Google.Flatbuffers\rust\**" />
+    <Compile Remove="Google.Flatbuffers\samples\**" />
+    <Compile Remove="Google.Flatbuffers\src\**" />
+    <Compile Remove="Google.Flatbuffers\swift\**" />
+    <Compile Remove="Google.Flatbuffers\tests\**" />
+    <Compile Remove="Google.Flatbuffers\ts\**" />
+    <EmbeddedResource Remove="Google.Flatbuffers\android\**" />
+    <EmbeddedResource Remove="Google.Flatbuffers\bazel\**" />
+    <EmbeddedResource Remove="Google.Flatbuffers\CMake\**" />
+    <EmbeddedResource Remove="Google.Flatbuffers\conan\**" />
+    <EmbeddedResource Remove="Google.Flatbuffers\dart\**" />
+    <EmbeddedResource Remove="Google.Flatbuffers\docs\**" />
+    <EmbeddedResource Remove="Google.Flatbuffers\go\**" />
+    <EmbeddedResource Remove="Google.Flatbuffers\grpc\**" />
+    <EmbeddedResource Remove="Google.Flatbuffers\include\**" />
+    <EmbeddedResource Remove="Google.Flatbuffers\java\**" />
+    <EmbeddedResource Remove="Google.Flatbuffers\js\**" />
+    <EmbeddedResource Remove="Google.Flatbuffers\lobster\**" />
+    <EmbeddedResource Remove="Google.Flatbuffers\lua\**" />
+    <EmbeddedResource Remove="Google.Flatbuffers\mjs\**" />
+    <EmbeddedResource Remove="Google.Flatbuffers\out\**" />
+    <EmbeddedResource Remove="Google.Flatbuffers\php\**" />
+    <EmbeddedResource Remove="Google.Flatbuffers\python\**" />
+    <EmbeddedResource Remove="Google.Flatbuffers\reflection\**" />
+    <EmbeddedResource Remove="Google.Flatbuffers\rust\**" />
+    <EmbeddedResource Remove="Google.Flatbuffers\samples\**" />
+    <EmbeddedResource Remove="Google.Flatbuffers\src\**" />
+    <EmbeddedResource Remove="Google.Flatbuffers\swift\**" />
+    <EmbeddedResource Remove="Google.Flatbuffers\tests\**" />
+    <EmbeddedResource Remove="Google.Flatbuffers\ts\**" />
+    <None Remove="Google.Flatbuffers\android\**" />
+    <None Remove="Google.Flatbuffers\bazel\**" />
+    <None Remove="Google.Flatbuffers\CMake\**" />
+    <None Remove="Google.Flatbuffers\conan\**" />
+    <None Remove="Google.Flatbuffers\dart\**" />
+    <None Remove="Google.Flatbuffers\docs\**" />
+    <None Remove="Google.Flatbuffers\go\**" />
+    <None Remove="Google.Flatbuffers\grpc\**" />
+    <None Remove="Google.Flatbuffers\include\**" />
+    <None Remove="Google.Flatbuffers\java\**" />
+    <None Remove="Google.Flatbuffers\js\**" />
+    <None Remove="Google.Flatbuffers\lobster\**" />
+    <None Remove="Google.Flatbuffers\lua\**" />
+    <None Remove="Google.Flatbuffers\mjs\**" />
+    <None Remove="Google.Flatbuffers\out\**" />
+    <None Remove="Google.Flatbuffers\php\**" />
+    <None Remove="Google.Flatbuffers\python\**" />
+    <None Remove="Google.Flatbuffers\reflection\**" />
+    <None Remove="Google.Flatbuffers\rust\**" />
+    <None Remove="Google.Flatbuffers\samples\**" />
+    <None Remove="Google.Flatbuffers\src\**" />
+    <None Remove="Google.Flatbuffers\swift\**" />
+    <None Remove="Google.Flatbuffers\tests\**" />
+    <None Remove="Google.Flatbuffers\ts\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Google.Protobuf" Version="3.13.0" />
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
   </ItemGroup>
 
   <ItemGroup>
