@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <TargetFramework>net5.0</TargetFramework>
     <!--<GenerateAssemblyConfigurationAttribute>false</GenerateAssemblyConfigurationAttribute>
     <GenerateAssemblyDescriptionAttribute>false</GenerateAssemblyDescriptionAttribute>
     <GenerateAssemblyProductAttribute>false</GenerateAssemblyProductAttribute>
@@ -34,12 +34,12 @@
     <Compile Remove="Google.Flatbuffers\reflection\**" />
     <Compile Remove="Google.Flatbuffers\rust\**" />
     <Compile Remove="Google.Flatbuffers\samples\**" />
-    <PackageReference Remove="Google.Flatbuffers\samples\**"/>
+    <PackageReference Remove="Google.Flatbuffers\samples\**" />
     <Compile Remove="Google.Flatbuffers\snap\**" />
     <Compile Remove="Google.Flatbuffers\src\**" />
     <Compile Remove="Google.Flatbuffers\swift\**" />
     <Compile Remove="Google.Flatbuffers\tests\**" />
-    <PackageReference Remove="Google.Flatbuffers\tests\**"/>
+    <PackageReference Remove="Google.Flatbuffers\tests\**" />
     <Compile Remove="Google.Flatbuffers\ts\**" />
     <EmbeddedResource Remove="Google.Flatbuffers\android\**" />
     <EmbeddedResource Remove="Google.Flatbuffers\bazel\**" />
