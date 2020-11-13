@@ -26,304 +26,26 @@ namespace Htf.Schemas.V1.Service.Quote {
           string.Concat(
             "CidTZXJ2aWNlcy9RdW90ZS9xdW90ZV9yZWNlaXZlcl9tc2cucHJvdG8SHGh0",
             "Zi5zY2hlbWFzLnYxLnNlcnZpY2UucXVvdGUaH2dvb2dsZS9wcm90b2J1Zi90",
-            "aW1lc3RhbXAucHJvdG8iYwoOUXVvdGVTdWJzY3JpYmUSEAoIZXhjaGFuZ2UY",
-            "ASABKAkSDgoGc3ltYm9sGAIgASgJEhQKDGVuYWJsZV90aWNrcxgDIAEoCBIZ",
-            "ChFvaGxjX2ludGVydmFsX3NlYxgEIAEoBSKSAQoRUXVvdGVTdWJzY3JpcHRp",
-            "b24SPwoJc3Vic2NyaWJlGAEgAygLMiwuaHRmLnNjaGVtYXMudjEuc2Vydmlj",
-            "ZS5xdW90ZS5RdW90ZVN1YnNjcmliZRINCgVjb3VudBgCIAEoBRItCgl0aW1l",
-            "c3RhbXAYAyABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQh+qAhxI",
-            "dGYuU2NoZW1hcy5WMS5TZXJ2aWNlLlF1b3RlYgZwcm90bzM="));
+            "aW1lc3RhbXAucHJvdG8i+wEKEVF1b3RlU3Vic2NyaXB0aW9uEkwKCW9wZXJh",
+            "dGlvbhgBIAEoDjI5Lmh0Zi5zY2hlbWFzLnYxLnNlcnZpY2UucXVvdGUuUXVv",
+            "dGVTdWJzY3JpcHRpb24uT3BlcmF0aW9uEhAKCGV4Y2hhbmdlGAIgASgJEg4K",
+            "BnN5bWJvbBgDIAEoCRIZChFvaGxjX2ludGVydmFsX3NlYxgEIAEoBRIuCgpz",
+            "dGFydF90aW1lGAUgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcCIr",
+            "CglPcGVyYXRpb24SDQoJU1VCU0NSSUJFEAASDwoLVU5TVUJTQ1JJQkUQASJW",
+            "ChJRdW90ZVN1YnNjcmlwdGlvbnMSQAoHc3ltYm9scxgBIAMoCzIvLmh0Zi5z",
+            "Y2hlbWFzLnYxLnNlcnZpY2UucXVvdGUuUXVvdGVTdWJzY3JpcHRpb25CH6oC",
+            "HEh0Zi5TY2hlbWFzLlYxLlNlcnZpY2UuUXVvdGViBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Htf.Schemas.V1.Service.Quote.QuoteSubscribe), global::Htf.Schemas.V1.Service.Quote.QuoteSubscribe.Parser, new[]{ "Exchange", "Symbol", "EnableTicks", "OhlcIntervalSec" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Htf.Schemas.V1.Service.Quote.QuoteSubscription), global::Htf.Schemas.V1.Service.Quote.QuoteSubscription.Parser, new[]{ "Subscribe", "Count", "Timestamp" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Htf.Schemas.V1.Service.Quote.QuoteSubscription), global::Htf.Schemas.V1.Service.Quote.QuoteSubscription.Parser, new[]{ "Operation", "Exchange", "Symbol", "OhlcIntervalSec", "StartTime" }, null, new[]{ typeof(global::Htf.Schemas.V1.Service.Quote.QuoteSubscription.Types.Operation) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Htf.Schemas.V1.Service.Quote.QuoteSubscriptions), global::Htf.Schemas.V1.Service.Quote.QuoteSubscriptions.Parser, new[]{ "Symbols" }, null, null, null, null)
           }));
     }
     #endregion
 
   }
   #region Messages
-  public sealed partial class QuoteSubscribe : pb::IMessage<QuoteSubscribe>
-  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      , pb::IBufferMessage
-  #endif
-  {
-    private static readonly pb::MessageParser<QuoteSubscribe> _parser = new pb::MessageParser<QuoteSubscribe>(() => new QuoteSubscribe());
-    private pb::UnknownFieldSet _unknownFields;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pb::MessageParser<QuoteSubscribe> Parser { get { return _parser; } }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pbr::MessageDescriptor Descriptor {
-      get { return global::Htf.Schemas.V1.Service.Quote.QuoteReceiverMsgReflection.Descriptor.MessageTypes[0]; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    pbr::MessageDescriptor pb::IMessage.Descriptor {
-      get { return Descriptor; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public QuoteSubscribe() {
-      OnConstruction();
-    }
-
-    partial void OnConstruction();
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public QuoteSubscribe(QuoteSubscribe other) : this() {
-      exchange_ = other.exchange_;
-      symbol_ = other.symbol_;
-      enableTicks_ = other.enableTicks_;
-      ohlcIntervalSec_ = other.ohlcIntervalSec_;
-      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public QuoteSubscribe Clone() {
-      return new QuoteSubscribe(this);
-    }
-
-    /// <summary>Field number for the "exchange" field.</summary>
-    public const int ExchangeFieldNumber = 1;
-    private string exchange_ = "";
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string Exchange {
-      get { return exchange_; }
-      set {
-        exchange_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    /// <summary>Field number for the "symbol" field.</summary>
-    public const int SymbolFieldNumber = 2;
-    private string symbol_ = "";
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string Symbol {
-      get { return symbol_; }
-      set {
-        symbol_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    /// <summary>Field number for the "enable_ticks" field.</summary>
-    public const int EnableTicksFieldNumber = 3;
-    private bool enableTicks_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public bool EnableTicks {
-      get { return enableTicks_; }
-      set {
-        enableTicks_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "ohlc_interval_sec" field.</summary>
-    public const int OhlcIntervalSecFieldNumber = 4;
-    private int ohlcIntervalSec_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public int OhlcIntervalSec {
-      get { return ohlcIntervalSec_; }
-      set {
-        ohlcIntervalSec_ = value;
-      }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override bool Equals(object other) {
-      return Equals(other as QuoteSubscribe);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public bool Equals(QuoteSubscribe other) {
-      if (ReferenceEquals(other, null)) {
-        return false;
-      }
-      if (ReferenceEquals(other, this)) {
-        return true;
-      }
-      if (Exchange != other.Exchange) return false;
-      if (Symbol != other.Symbol) return false;
-      if (EnableTicks != other.EnableTicks) return false;
-      if (OhlcIntervalSec != other.OhlcIntervalSec) return false;
-      return Equals(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override int GetHashCode() {
-      int hash = 1;
-      if (Exchange.Length != 0) hash ^= Exchange.GetHashCode();
-      if (Symbol.Length != 0) hash ^= Symbol.GetHashCode();
-      if (EnableTicks != false) hash ^= EnableTicks.GetHashCode();
-      if (OhlcIntervalSec != 0) hash ^= OhlcIntervalSec.GetHashCode();
-      if (_unknownFields != null) {
-        hash ^= _unknownFields.GetHashCode();
-      }
-      return hash;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override string ToString() {
-      return pb::JsonFormatter.ToDiagnosticString(this);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void WriteTo(pb::CodedOutputStream output) {
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      output.WriteRawMessage(this);
-    #else
-      if (Exchange.Length != 0) {
-        output.WriteRawTag(10);
-        output.WriteString(Exchange);
-      }
-      if (Symbol.Length != 0) {
-        output.WriteRawTag(18);
-        output.WriteString(Symbol);
-      }
-      if (EnableTicks != false) {
-        output.WriteRawTag(24);
-        output.WriteBool(EnableTicks);
-      }
-      if (OhlcIntervalSec != 0) {
-        output.WriteRawTag(32);
-        output.WriteInt32(OhlcIntervalSec);
-      }
-      if (_unknownFields != null) {
-        _unknownFields.WriteTo(output);
-      }
-    #endif
-    }
-
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (Exchange.Length != 0) {
-        output.WriteRawTag(10);
-        output.WriteString(Exchange);
-      }
-      if (Symbol.Length != 0) {
-        output.WriteRawTag(18);
-        output.WriteString(Symbol);
-      }
-      if (EnableTicks != false) {
-        output.WriteRawTag(24);
-        output.WriteBool(EnableTicks);
-      }
-      if (OhlcIntervalSec != 0) {
-        output.WriteRawTag(32);
-        output.WriteInt32(OhlcIntervalSec);
-      }
-      if (_unknownFields != null) {
-        _unknownFields.WriteTo(ref output);
-      }
-    }
-    #endif
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public int CalculateSize() {
-      int size = 0;
-      if (Exchange.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(Exchange);
-      }
-      if (Symbol.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(Symbol);
-      }
-      if (EnableTicks != false) {
-        size += 1 + 1;
-      }
-      if (OhlcIntervalSec != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeInt32Size(OhlcIntervalSec);
-      }
-      if (_unknownFields != null) {
-        size += _unknownFields.CalculateSize();
-      }
-      return size;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(QuoteSubscribe other) {
-      if (other == null) {
-        return;
-      }
-      if (other.Exchange.Length != 0) {
-        Exchange = other.Exchange;
-      }
-      if (other.Symbol.Length != 0) {
-        Symbol = other.Symbol;
-      }
-      if (other.EnableTicks != false) {
-        EnableTicks = other.EnableTicks;
-      }
-      if (other.OhlcIntervalSec != 0) {
-        OhlcIntervalSec = other.OhlcIntervalSec;
-      }
-      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(pb::CodedInputStream input) {
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      input.ReadRawMessage(this);
-    #else
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
-            break;
-          case 10: {
-            Exchange = input.ReadString();
-            break;
-          }
-          case 18: {
-            Symbol = input.ReadString();
-            break;
-          }
-          case 24: {
-            EnableTicks = input.ReadBool();
-            break;
-          }
-          case 32: {
-            OhlcIntervalSec = input.ReadInt32();
-            break;
-          }
-        }
-      }
-    #endif
-    }
-
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
-            break;
-          case 10: {
-            Exchange = input.ReadString();
-            break;
-          }
-          case 18: {
-            Symbol = input.ReadString();
-            break;
-          }
-          case 24: {
-            EnableTicks = input.ReadBool();
-            break;
-          }
-          case 32: {
-            OhlcIntervalSec = input.ReadInt32();
-            break;
-          }
-        }
-      }
-    }
-    #endif
-
-  }
-
   public sealed partial class QuoteSubscription : pb::IMessage<QuoteSubscription>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -336,7 +58,7 @@ namespace Htf.Schemas.V1.Service.Quote {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Htf.Schemas.V1.Service.Quote.QuoteReceiverMsgReflection.Descriptor.MessageTypes[1]; }
+      get { return global::Htf.Schemas.V1.Service.Quote.QuoteReceiverMsgReflection.Descriptor.MessageTypes[0]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -353,9 +75,11 @@ namespace Htf.Schemas.V1.Service.Quote {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public QuoteSubscription(QuoteSubscription other) : this() {
-      subscribe_ = other.subscribe_.Clone();
-      count_ = other.count_;
-      timestamp_ = other.timestamp_ != null ? other.timestamp_.Clone() : null;
+      operation_ = other.operation_;
+      exchange_ = other.exchange_;
+      symbol_ = other.symbol_;
+      ohlcIntervalSec_ = other.ohlcIntervalSec_;
+      startTime_ = other.startTime_ != null ? other.startTime_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -364,35 +88,58 @@ namespace Htf.Schemas.V1.Service.Quote {
       return new QuoteSubscription(this);
     }
 
-    /// <summary>Field number for the "subscribe" field.</summary>
-    public const int SubscribeFieldNumber = 1;
-    private static readonly pb::FieldCodec<global::Htf.Schemas.V1.Service.Quote.QuoteSubscribe> _repeated_subscribe_codec
-        = pb::FieldCodec.ForMessage(10, global::Htf.Schemas.V1.Service.Quote.QuoteSubscribe.Parser);
-    private readonly pbc::RepeatedField<global::Htf.Schemas.V1.Service.Quote.QuoteSubscribe> subscribe_ = new pbc::RepeatedField<global::Htf.Schemas.V1.Service.Quote.QuoteSubscribe>();
+    /// <summary>Field number for the "operation" field.</summary>
+    public const int OperationFieldNumber = 1;
+    private global::Htf.Schemas.V1.Service.Quote.QuoteSubscription.Types.Operation operation_ = global::Htf.Schemas.V1.Service.Quote.QuoteSubscription.Types.Operation.Subscribe;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public pbc::RepeatedField<global::Htf.Schemas.V1.Service.Quote.QuoteSubscribe> Subscribe {
-      get { return subscribe_; }
-    }
-
-    /// <summary>Field number for the "count" field.</summary>
-    public const int CountFieldNumber = 2;
-    private int count_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public int Count {
-      get { return count_; }
+    public global::Htf.Schemas.V1.Service.Quote.QuoteSubscription.Types.Operation Operation {
+      get { return operation_; }
       set {
-        count_ = value;
+        operation_ = value;
       }
     }
 
-    /// <summary>Field number for the "timestamp" field.</summary>
-    public const int TimestampFieldNumber = 3;
-    private global::Google.Protobuf.WellKnownTypes.Timestamp timestamp_;
+    /// <summary>Field number for the "exchange" field.</summary>
+    public const int ExchangeFieldNumber = 2;
+    private string exchange_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Google.Protobuf.WellKnownTypes.Timestamp Timestamp {
-      get { return timestamp_; }
+    public string Exchange {
+      get { return exchange_; }
       set {
-        timestamp_ = value;
+        exchange_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "symbol" field.</summary>
+    public const int SymbolFieldNumber = 3;
+    private string symbol_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Symbol {
+      get { return symbol_; }
+      set {
+        symbol_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "ohlc_interval_sec" field.</summary>
+    public const int OhlcIntervalSecFieldNumber = 4;
+    private int ohlcIntervalSec_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int OhlcIntervalSec {
+      get { return ohlcIntervalSec_; }
+      set {
+        ohlcIntervalSec_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "start_time" field.</summary>
+    public const int StartTimeFieldNumber = 5;
+    private global::Google.Protobuf.WellKnownTypes.Timestamp startTime_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Protobuf.WellKnownTypes.Timestamp StartTime {
+      get { return startTime_; }
+      set {
+        startTime_ = value;
       }
     }
 
@@ -409,18 +156,22 @@ namespace Htf.Schemas.V1.Service.Quote {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if(!subscribe_.Equals(other.subscribe_)) return false;
-      if (Count != other.Count) return false;
-      if (!object.Equals(Timestamp, other.Timestamp)) return false;
+      if (Operation != other.Operation) return false;
+      if (Exchange != other.Exchange) return false;
+      if (Symbol != other.Symbol) return false;
+      if (OhlcIntervalSec != other.OhlcIntervalSec) return false;
+      if (!object.Equals(StartTime, other.StartTime)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
-      hash ^= subscribe_.GetHashCode();
-      if (Count != 0) hash ^= Count.GetHashCode();
-      if (timestamp_ != null) hash ^= Timestamp.GetHashCode();
+      if (Operation != global::Htf.Schemas.V1.Service.Quote.QuoteSubscription.Types.Operation.Subscribe) hash ^= Operation.GetHashCode();
+      if (Exchange.Length != 0) hash ^= Exchange.GetHashCode();
+      if (Symbol.Length != 0) hash ^= Symbol.GetHashCode();
+      if (OhlcIntervalSec != 0) hash ^= OhlcIntervalSec.GetHashCode();
+      if (startTime_ != null) hash ^= StartTime.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -437,14 +188,25 @@ namespace Htf.Schemas.V1.Service.Quote {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      subscribe_.WriteTo(output, _repeated_subscribe_codec);
-      if (Count != 0) {
-        output.WriteRawTag(16);
-        output.WriteInt32(Count);
+      if (Operation != global::Htf.Schemas.V1.Service.Quote.QuoteSubscription.Types.Operation.Subscribe) {
+        output.WriteRawTag(8);
+        output.WriteEnum((int) Operation);
       }
-      if (timestamp_ != null) {
+      if (Exchange.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(Exchange);
+      }
+      if (Symbol.Length != 0) {
         output.WriteRawTag(26);
-        output.WriteMessage(Timestamp);
+        output.WriteString(Symbol);
+      }
+      if (OhlcIntervalSec != 0) {
+        output.WriteRawTag(32);
+        output.WriteInt32(OhlcIntervalSec);
+      }
+      if (startTime_ != null) {
+        output.WriteRawTag(42);
+        output.WriteMessage(StartTime);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -455,14 +217,25 @@ namespace Htf.Schemas.V1.Service.Quote {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      subscribe_.WriteTo(ref output, _repeated_subscribe_codec);
-      if (Count != 0) {
-        output.WriteRawTag(16);
-        output.WriteInt32(Count);
+      if (Operation != global::Htf.Schemas.V1.Service.Quote.QuoteSubscription.Types.Operation.Subscribe) {
+        output.WriteRawTag(8);
+        output.WriteEnum((int) Operation);
       }
-      if (timestamp_ != null) {
+      if (Exchange.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(Exchange);
+      }
+      if (Symbol.Length != 0) {
         output.WriteRawTag(26);
-        output.WriteMessage(Timestamp);
+        output.WriteString(Symbol);
+      }
+      if (OhlcIntervalSec != 0) {
+        output.WriteRawTag(32);
+        output.WriteInt32(OhlcIntervalSec);
+      }
+      if (startTime_ != null) {
+        output.WriteRawTag(42);
+        output.WriteMessage(StartTime);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -473,12 +246,20 @@ namespace Htf.Schemas.V1.Service.Quote {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
-      size += subscribe_.CalculateSize(_repeated_subscribe_codec);
-      if (Count != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeInt32Size(Count);
+      if (Operation != global::Htf.Schemas.V1.Service.Quote.QuoteSubscription.Types.Operation.Subscribe) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Operation);
       }
-      if (timestamp_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Timestamp);
+      if (Exchange.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Exchange);
+      }
+      if (Symbol.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Symbol);
+      }
+      if (OhlcIntervalSec != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(OhlcIntervalSec);
+      }
+      if (startTime_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(StartTime);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -491,15 +272,23 @@ namespace Htf.Schemas.V1.Service.Quote {
       if (other == null) {
         return;
       }
-      subscribe_.Add(other.subscribe_);
-      if (other.Count != 0) {
-        Count = other.Count;
+      if (other.Operation != global::Htf.Schemas.V1.Service.Quote.QuoteSubscription.Types.Operation.Subscribe) {
+        Operation = other.Operation;
       }
-      if (other.timestamp_ != null) {
-        if (timestamp_ == null) {
-          Timestamp = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+      if (other.Exchange.Length != 0) {
+        Exchange = other.Exchange;
+      }
+      if (other.Symbol.Length != 0) {
+        Symbol = other.Symbol;
+      }
+      if (other.OhlcIntervalSec != 0) {
+        OhlcIntervalSec = other.OhlcIntervalSec;
+      }
+      if (other.startTime_ != null) {
+        if (startTime_ == null) {
+          StartTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
         }
-        Timestamp.MergeFrom(other.Timestamp);
+        StartTime.MergeFrom(other.StartTime);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -515,19 +304,219 @@ namespace Htf.Schemas.V1.Service.Quote {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 10: {
-            subscribe_.AddEntriesFrom(input, _repeated_subscribe_codec);
+          case 8: {
+            Operation = (global::Htf.Schemas.V1.Service.Quote.QuoteSubscription.Types.Operation) input.ReadEnum();
             break;
           }
-          case 16: {
-            Count = input.ReadInt32();
+          case 18: {
+            Exchange = input.ReadString();
             break;
           }
           case 26: {
-            if (timestamp_ == null) {
-              Timestamp = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            Symbol = input.ReadString();
+            break;
+          }
+          case 32: {
+            OhlcIntervalSec = input.ReadInt32();
+            break;
+          }
+          case 42: {
+            if (startTime_ == null) {
+              StartTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
             }
-            input.ReadMessage(Timestamp);
+            input.ReadMessage(StartTime);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 8: {
+            Operation = (global::Htf.Schemas.V1.Service.Quote.QuoteSubscription.Types.Operation) input.ReadEnum();
+            break;
+          }
+          case 18: {
+            Exchange = input.ReadString();
+            break;
+          }
+          case 26: {
+            Symbol = input.ReadString();
+            break;
+          }
+          case 32: {
+            OhlcIntervalSec = input.ReadInt32();
+            break;
+          }
+          case 42: {
+            if (startTime_ == null) {
+              StartTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(StartTime);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the QuoteSubscription message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static partial class Types {
+      public enum Operation {
+        [pbr::OriginalName("SUBSCRIBE")] Subscribe = 0,
+        [pbr::OriginalName("UNSUBSCRIBE")] Unsubscribe = 1,
+      }
+
+    }
+    #endregion
+
+  }
+
+  public sealed partial class QuoteSubscriptions : pb::IMessage<QuoteSubscriptions>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<QuoteSubscriptions> _parser = new pb::MessageParser<QuoteSubscriptions>(() => new QuoteSubscriptions());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<QuoteSubscriptions> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Htf.Schemas.V1.Service.Quote.QuoteReceiverMsgReflection.Descriptor.MessageTypes[1]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public QuoteSubscriptions() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public QuoteSubscriptions(QuoteSubscriptions other) : this() {
+      symbols_ = other.symbols_.Clone();
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public QuoteSubscriptions Clone() {
+      return new QuoteSubscriptions(this);
+    }
+
+    /// <summary>Field number for the "symbols" field.</summary>
+    public const int SymbolsFieldNumber = 1;
+    private static readonly pb::FieldCodec<global::Htf.Schemas.V1.Service.Quote.QuoteSubscription> _repeated_symbols_codec
+        = pb::FieldCodec.ForMessage(10, global::Htf.Schemas.V1.Service.Quote.QuoteSubscription.Parser);
+    private readonly pbc::RepeatedField<global::Htf.Schemas.V1.Service.Quote.QuoteSubscription> symbols_ = new pbc::RepeatedField<global::Htf.Schemas.V1.Service.Quote.QuoteSubscription>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::RepeatedField<global::Htf.Schemas.V1.Service.Quote.QuoteSubscription> Symbols {
+      get { return symbols_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as QuoteSubscriptions);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(QuoteSubscriptions other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if(!symbols_.Equals(other.symbols_)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      hash ^= symbols_.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      symbols_.WriteTo(output, _repeated_symbols_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      symbols_.WriteTo(ref output, _repeated_symbols_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      size += symbols_.CalculateSize(_repeated_symbols_codec);
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(QuoteSubscriptions other) {
+      if (other == null) {
+        return;
+      }
+      symbols_.Add(other.symbols_);
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            symbols_.AddEntriesFrom(input, _repeated_symbols_codec);
             break;
           }
         }
@@ -545,18 +534,7 @@ namespace Htf.Schemas.V1.Service.Quote {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 10: {
-            subscribe_.AddEntriesFrom(ref input, _repeated_subscribe_codec);
-            break;
-          }
-          case 16: {
-            Count = input.ReadInt32();
-            break;
-          }
-          case 26: {
-            if (timestamp_ == null) {
-              Timestamp = new global::Google.Protobuf.WellKnownTypes.Timestamp();
-            }
-            input.ReadMessage(Timestamp);
+            symbols_.AddEntriesFrom(ref input, _repeated_symbols_codec);
             break;
           }
         }
