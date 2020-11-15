@@ -37,20 +37,25 @@ jobs:
     needs: check_version_number
     if: needs.check_version_number.outputs.new_release_published == 'true'
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        dotnet: [ '2.1.x', '5.0.x' ]
+    # strategy:
+    #   matrix:
+    #     dotnet: [ '2.1.x', '5.0.x' ]
     steps:
       - name: Checkout
         uses: actions/checkout@v2
         with:
           submodules: 'recursive'
       
-      - name:  Setup dotnet
+      - name:  Setup dotnet 2.1.x
         uses: actions/setup-dotnet@v1
         with:
-            dotnet-version: ${{ matrix.dotnet }} # SDK Version to use.
+            dotnet-version: '2.1.x' # SDK Version to use.
       
+      - name:  Setup dotnet 5.0.x
+        uses: actions/setup-dotnet@v1
+        with:
+            dotnet-version: '5.0.x' # SDK Version to use.
+
       - name: Build project
         run: dotnet build --configuration Release -p:Version=${{ needs.check_version_number.outputs.new_release_version }}.0
       
@@ -101,6 +106,6 @@ jobs:
     - run: ls -R
     - uses: actions/setup-dotnet@v1
       with:
-        dotnet-version: '5.0.x' # SDK Version to use.
+        dotnet-version: '5.0.100' # SDK Version to use.
     - name: Upload to nuget
       run: dotnet nuget push ./*.nupkg --api-key ${{ secrets.LUMPY_NUGET_TOKEN }} --source https://api.nuget.org/v3/index.json
