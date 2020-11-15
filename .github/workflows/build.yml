@@ -46,7 +46,7 @@ jobs:
       - name:  Setup dotnet
         uses: actions/setup-dotnet@v1
         with:
-            dotnet-version: '5.0.x' # SDK Version to use.
+            dotnet-version: '3.1.x' # SDK Version to use.
       
       - name: Build project
         run: dotnet build --configuration Release -p:Version=${{ needs.check_version_number.outputs.new_release_version }}.0
@@ -98,6 +98,6 @@ jobs:
     - run: ls -R
     - uses: actions/setup-dotnet@v1
       with:
-        dotnet-version: '5.0.x' # SDK Version to use.
+        dotnet-version: '3.1.x' # SDK Version to use.
     - name: Upload to nuget
       run: dotnet nuget push ./*.nupkg --api-key ${{ secrets.LUMPY_NUGET_TOKEN }} --source https://api.nuget.org/v3/index.json
