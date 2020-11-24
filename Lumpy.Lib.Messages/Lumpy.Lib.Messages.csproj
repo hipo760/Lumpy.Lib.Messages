@@ -26,15 +26,15 @@
   </ItemGroup>
 
   <ItemGroup>
-    <FlatSharpSchema Include="HTF.Schemas\v1\FlatBuffers\Data\quote.fbs" />
+    <FlatSharpSchema Include="Htf.Schemas\v1\FlatBuffers\Data\quote.fbs" />
   </ItemGroup>
   <ItemGroup>
-    <Protobuf Include="HTF.Schemas\v1\ProtocolBuffers\Data\Market\quote_info.proto"
-              ProtoRoot="HTF.Schemas\v1\ProtocolBuffers"></Protobuf>
-    <Protobuf Include="HTF.Schemas\v1\ProtocolBuffers\Services\Quote\quote_receiver_msg.proto"
-              ProtoRoot="HTF.Schemas\v1\ProtocolBuffers"></Protobuf>
-    <Protobuf Include="HTF.Schemas\v1\ProtocolBuffers\Services\Quote\quote_maintainer_msg.proto"
-              ProtoRoot="HTF.Schemas\v1\ProtocolBuffers"></Protobuf>
+    <Protobuf Include="Htf.Schemas\v1\ProtocolBuffers\Data\Market\quote_info.proto"
+              ProtoRoot="Htf.Schemas\v1\ProtocolBuffers"></Protobuf>
+    <Protobuf Include="Htf.Schemas\v1\ProtocolBuffers\Services\Quote\quote_receiver_msg.proto"
+              ProtoRoot="Htf.Schemas\v1\ProtocolBuffers"></Protobuf>
+    <Protobuf Include="Htf.Schemas\v1\ProtocolBuffers\Services\Quote\quote_maintainer_msg.proto"
+              ProtoRoot="Htf.Schemas\v1\ProtocolBuffers"></Protobuf>
   </ItemGroup>
 </Project>
 
